@@ -1,4 +1,4 @@
-FROM  centos:latest
+FROM ubuntu:latest
 MAINTAINER amol2929funde@gmail.com
 RUN apt install -y apache2 \
  zip\
