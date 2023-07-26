@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu
 MAINTAINER amol2929funde@gmail.com
 RUN apt-get clean && apt-get update
 RUN apt-get install -y apache2 
@@ -11,8 +11,8 @@ RUN cp -rvf photogenic/* .
 RUN rm -rf photogenic photogenic.zip
 RUN a2enmod rewrite
 RUN chown -R www-data:www-data /var/www/html/
-CMD ["/usr/sbin/apache2", "-D",  "FOREGROUND"]
 EXPOSE 80
+CMD apachectl -D FOREGROUND
  
  
 # FROM  centos:latest
